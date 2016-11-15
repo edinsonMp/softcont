@@ -1,0 +1,103 @@
+	<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CONTACTANOS</title>
+		<meta name="description" content="A perspective slideshow based on Franklin Ta's CSS matrix3d transforms" />
+		<meta name="keywords" content="perspective, mockup, slideshow, transform, 3d, matrix, css" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/mockup2.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body class="demo-2">
+		<div class="container">
+			<!-- Top Navigation -->
+			
+			<div id="wrap" class="wrap">
+				<div class="mockup">
+					<img class="mockup__img" src="img/mockup2.jpg" />
+					<div class="screen">
+						<ul id="slideshow" class="slideshow">
+							<li class="slideshow__item"><img src="img/large/2.png"/></li>
+							<li class="slideshow__item"><img src="img/large/3.png"/></li>
+							<li class="slideshow__item"><img src="img/large/4.png"/></li>
+							<li class="slideshow__item"><img src="img/large/1.png"/></li>
+						</ul>
+					</div>
+					<header class="codrops-header">
+						<h1><span>Softcont</span> Contactanos <i>animate se parte del software con mas alto desenpeño </i></h1>
+					</header>
+				</div>
+			</div>
+			<div class="content">
+				<nav class="codrops-demos">
+					<a  href="index.html">Inicio</a>
+					<a class="current-demo" href="index2.html">Contactanos</a>
+					
+					<a href="index4.html">Imformacion</a>
+					<a href="index3.html"> GUIA</a>
+			
+				</nav>
+				<p><strong>Contacatanos </strong></p>
+				<ul class="ref">
+					<li><strong>Correo electronico:</strong> <a >Softcont@gmail.com</a></li>
+					<li><strong>Telefono:</strong> 3042442854<a </a></li>
+						<li><strong>Direccion:</strong> <a </a></li>
+				</ul>
+				<ul class="ref">
+					
+					<li><a href="https://creativemarket.com/Vadim.Sherbakov"> Vadim Sherbakov's Creative Market Shop</a></li>
+				</ul>
+				<ul class="ref">
+					<li><strong><a href="http://pixelbuddha.net/freebie/280-line-icons-pack">Line Icons</a></strong> by Jonas Nullens for PixelBuddha</li>
+				</ul>
+			</div>
+			<!-- Related demos -->
+			
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			(function() {
+				new Slideshow( document.getElementById( 'slideshow' ) );
+
+				/* Mockup responsiveness */
+				var body = docElem = window.document.documentElement,
+					wrap = document.getElementById( 'wrap' ),
+					mockup = wrap.querySelector( '.mockup' ),
+					mockupWidth = mockup.offsetWidth;
+
+				scaleMockup();
+
+				function scaleMockup() {
+					var wrapWidth = wrap.offsetWidth,
+						val = wrapWidth / mockupWidth;
+
+					mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+				}
+				
+				window.addEventListener( 'resize', resizeHandler );
+
+				function resizeHandler() {
+					function delayed() {
+						resize();
+						resizeTimeout = null;
+					}
+					if ( typeof resizeTimeout != 'undefined' ) {
+						clearTimeout( resizeTimeout );
+					}
+					resizeTimeout = setTimeout( delayed, 50 );
+				}
+
+				function resize() {
+					scaleMockup();
+				}
+			})();
+		</script>
+	</body>
+</html>
